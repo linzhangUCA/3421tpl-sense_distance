@@ -1,10 +1,11 @@
 """
-Remotely control your robot and drive it to the blue marker in LSCA 105
+Rush the robot to a wall, stop at the required distance
 """
-from gpiozero import Robot
-from pynput import keyboard
+from gpiozero import DistanceSensor
+from time import sleep
 
+# sensor = DistanceSensor(23, 24)
 
-#### Write your code below ####
-# robot = Robot()
-# with keyboard.Events() as events:
+# while True:
+    # print('Distance to nearest object is', sensor.distance, 'm')
+    # sleep(1)
