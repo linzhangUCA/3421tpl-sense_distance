@@ -11,7 +11,9 @@ Use the ultrasonic distance sensor to sense the wall in front of your robot. Cod
    3. (20%) Drive forward. Stop when distance to the wall is 0.25 +/- 0.1 meters.
    4. (20%) Drive backward. Stop when distance to the wall is 0.5 +/- 0.1 meters.
    
-> Hint: you may need to use different duty cycles on the wheels so that your robot can drive straight lines.
+> Hints:
+> 1. Find an appropriate speed for your robot.
+> 2. You may need to use different duty cycles on the wheels so that your robot can drive straight.
 
 2. (20%) Upload a video which records the robot's back and forth movement. 
 
