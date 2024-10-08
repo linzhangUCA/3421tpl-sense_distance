@@ -14,6 +14,7 @@ Use the ultrasonic distance sensor to sense the wall in front of your robot. Cod
 > Hints:
 > 1. Find an appropriate speed for your robot.
 > 2. You may need to use different duty cycles on the wheels so that your robot can drive straight.
+> 3. [picozero](https://picozero.readthedocs.io/en/latest/) library is optional. You can reapeatedly trigger the HC-SR04 module using a PWM signal then read its feedback.
 
 2. (20%) Upload a video which records the robot's back and forth movement. 
 
