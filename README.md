@@ -1,7 +1,28 @@
-# Wall Sensing 
-Use the ultrasonic distance sensor to sense the wall in front of your robot. Code your robot's behaviors according to the distance to the wall. There are taped markers on the ground to help you better observe your robot's movement. 
+# Sense the Wall 
+Use the ultrasonic distance sensor to sense the wall in front of your robot. 
+Code motors' behaviors based on the distance sensor's data. 
+There are taped markers on the ground to help you better observe your robot's movement. 
 
 ## Requirements:
+
+### 1. Physical Configuration
+1.1. Wiring Pico and Motor Driver Board
+
+    Control left motor using A channel of the motor driver board.
+    Control right motor using B channel.
+    (5%) Use GPIO7 for left motor's PWM input.
+    (5%) Use GPIO9 for left motor's IN1 input.
+    (5%) Use GPIO8 for left motor's IN2 input.
+    (5%) Use GPIO15 for right motor's PWM input.
+    (5%) Use GPIO13 for right motor's IN1 input.
+    (5%) Use GPIO14 for right motor's IN2 input.
+    (5%) Use GPIO12 for motor driver's STBY input.
+
+1.2. Circuit Picture
+
+Please take a picture of your circuit and display it below 👇
+
+### 2. Coding Exercise
 1. (80%) Complete `wall_sensing.py` perform the following sequential movements.
    ![wall_sense](/wall_sensing.png)
 
