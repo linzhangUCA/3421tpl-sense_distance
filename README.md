@@ -4,38 +4,43 @@ Code motors' behaviors based on the distance sensor's data.
 There are taped markers on the ground to help you better observe your robot's movement. 
 
 ## Requirements:
+> [!IMPORTANT]
+> Redeem points by showcasing to Dr. Zhang in the classroom (LSCA105)
 
-### 1. Physical Configuration
-1.1. Wiring Pico and Motor Driver Board
+### 1. (25%) Physical Configuration
+- (5%) Wire up a Common cathode RGB LED to Pico.
+- (10%) Wire up motor driver board to Pico.
+- (10%) Wire up HC-SR04 ultrasonic distance sensor to Pico. 
+> [!NOTE]
+> Please use a voltage divider circuit to down scale `Echo` pin's signal to around **3.3 V** before feed it into a GPIO pin on Pico.
+  
+### 2. (75%) Coding Exercise
+Place your robot (distasnce sensor) 0.5 meters away from the wall. Start [wall_sensing.py](wall_sensing.py), and perform the following sequential movements.
 
-    Control left motor using A channel of the motor driver board.
-    Control right motor using B channel.
-    (5%) Use GPIO7 for left motor's PWM input.
-    (5%) Use GPIO9 for left motor's IN1 input.
-    (5%) Use GPIO8 for left motor's IN2 input.
-    (5%) Use GPIO15 for right motor's PWM input.
-    (5%) Use GPIO13 for right motor's IN1 input.
-    (5%) Use GPIO14 for right motor's IN2 input.
-    (5%) Use GPIO12 for motor driver's STBY input.
+1. (15%) Initialization (One-Time system check): blink all LEDs at the same time if the sensor found the wall (distance of `None` means no wall was found).
+Blink LEDs with frequency of 5 Hz, lasting 2 seconds.
+1. (15%) Drive **forward** with `GREEN` on.
+2. **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
+3. (15%) Drive **backward** with `BLUE` on.
+4. **Stop 1 second** with `RED` on, when distance to the wall is 1 +/- 0.1 meters.
+5. (15%) Drive **forward** with `GREEN` on.
+6. **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
+7. (15%) Drive **backward** with `BLUE` on.
+8. **Stop 1 second** with `RED` on, when distance to the wall is 0.5 +/- 0.1 meters.
 
-1.2. Circuit Picture
+> [!NOTE]
+> When one LED is on, other LEDs need to be turned off.
 
-Please take a picture of your circuit and display it below 👇
+> [!TIP]
+> - Pick a good speed for motors.
+> - Polish your caster wheel to do some extra coding to make your robot move in straight lines..
 
-### 2. Coding Exercise
-1. (80%) Complete `wall_sensing.py` perform the following sequential movements.
-   ![wall_sense](/wall_sensing.png)
 
-   Initially, place the robot (distasnce sensor) 0.5 meters away from the wall. By starting your program, the robot should be automatically perform the following sequence.
-   1. (20%) Drive forward. Stop when distance to the wall is 0.25 +/- 0.1 meters.
-   2. (20%) Drive backward. Stop when distance to the wall is 1 +/- 0.1 meters.
-   3. (20%) Drive forward. Stop when distance to the wall is 0.25 +/- 0.1 meters.
-   4. (20%) Drive backward. Stop when distance to the wall is 0.5 +/- 0.1 meters.
-   
+![wall_sense](/wall_sensing.png)
+
 > Hints:
 > 1. Find an appropriate speed for your robot.
 > 2. You may need to use different duty cycles on the wheels so that your robot can drive straight.
 > 3. [picozero](https://picozero.readthedocs.io/en/latest/) library is optional. You can reapeatedly trigger the HC-SR04 module using a PWM signal then read its feedback.
 
-2. (20%) Upload a video which records the robot's back and forth movement. 
 
