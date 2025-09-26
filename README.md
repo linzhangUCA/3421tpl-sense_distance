@@ -18,7 +18,7 @@ There are taped markers on the ground to help you better observe your robot's mo
 ### 2. (65%) Coding Exercise
 Place your robot (distasnce sensor) 0.5 meters away from the wall. Start [wall_sensing.py](wall_sensing.py), and perform the following sequential movements.
 
-![wall_sense](/wall_sensing.png)
+![wall_sense](images/wall_sensing.jpg)
 
 1. (5%) Initialization (One-Time system check): blink all LEDs at the same time if the sensor found the wall (distance of `None` means no wall was found).
 Blink LEDs with frequency of 5 Hz, lasting 2 seconds.
