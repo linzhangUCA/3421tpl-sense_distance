@@ -8,12 +8,12 @@ There are taped markers on the ground to help you better observe your robot's mo
 > Redeem points by showcasing to Dr. Zhang in the classroom (LSCA105)
 
 ### 1. (25%) Physical Configuration
+- (5%) Wire up the power source.
 - (5%) Wire up a Common cathode RGB LED to Pico.
 - (5%) Wire up motor driver board to Pico.
 - (10%) Wire up HC-SR04 ultrasonic distance sensor to Pico. 
 > [!NOTE]
 > Please use a voltage divider circuit to down scale `Echo` pin's signal to around **3.3 V** before feed it into a GPIO pin on Pico.
-- (5%) Wire up the power source.
     
 ### 2. (65%) Coding Exercise
 Place your robot (distasnce sensor) 0.5 meters away from the wall. Start [wall_sensing.py](wall_sensing.py), and perform the following sequential movements.
