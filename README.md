@@ -17,16 +17,16 @@ There are taped markers on the ground to help you better observe your robot's mo
 ### 2. (75%) Coding Exercise
 Place your robot (distasnce sensor) 0.5 meters away from the wall. Start [wall_sensing.py](wall_sensing.py), and perform the following sequential movements.
 
-1. (15%) Initialization (One-Time system check): blink all LEDs at the same time if the sensor found the wall (distance of `None` means no wall was found).
+1. (5%) Initialization (One-Time system check): blink all LEDs at the same time if the sensor found the wall (distance of `None` means no wall was found).
 Blink LEDs with frequency of 5 Hz, lasting 2 seconds.
-1. (15%) Drive **forward** with `GREEN` on.
-2. **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
-3. (15%) Drive **backward** with `BLUE` on.
-4. **Stop 1 second** with `RED` on, when distance to the wall is 1 +/- 0.1 meters.
-5. (15%) Drive **forward** with `GREEN` on.
-6. **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
-7. (15%) Drive **backward** with `BLUE` on.
-8. **Stop 1 second** with `RED` on, when distance to the wall is 0.5 +/- 0.1 meters.
+2. (10%) Drive **forward** with `GREEN` on.
+3. (7.5%) **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
+4. (10%) Drive **backward** with `BLUE` on.
+5. (7.5%) **Stop 1 second** with `RED` on, when distance to the wall is 1 +/- 0.1 meters.
+6. (10%) Drive **forward** with `GREEN` on.
+7. (7.5%) **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
+8. (10%) Drive **backward** with `BLUE` on.
+9. (7.5%) **Stop 1 second** with `RED` on, when distance to the wall is 0.5 +/- 0.1 meters.
 
 > [!NOTE]
 > When one LED is on, other LEDs need to be turned off.
