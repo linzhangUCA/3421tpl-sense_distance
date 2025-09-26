@@ -27,7 +27,7 @@ Blink LEDs with frequency of 5 Hz, lasting 2 seconds.
 6. (10%) Drive **forward** with `GREEN` on.
 7. (5%) **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
 8. (10%) Drive **backward** with `BLUE` on.
-9. (5%) **Stop 1 second** with `RED` on, when distance to the wall is 0.5 +/- 0.1 meters.
+9. (5%) **Stop (or shutdown)** with `RED` on, when distance to the wall is 0.5 +/- 0.1 meters.
 
 > [!NOTE]
 > When one LED is on, other LEDs need to be turned off.
