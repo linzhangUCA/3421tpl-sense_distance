@@ -1,4 +1,4 @@
-# Sense the Wall 
+# Sense Distance 
 Use the ultrasonic distance sensor to sense the wall in front of your robot. 
 Code motors' behaviors based on the distance sensor's data. 
 There are taped markers on the ground to help you better observe your robot's movement. 
@@ -48,7 +48,7 @@ Build a voltage divider circuit using these two resistors as shown in page 12 an
 > Please write out the math equation, define first appeared symbols and substitute numbers to finish the calculation.
 
 
-2. (4%) Based on your result, can Pico correctly work with the received signal? Why or why not? 
+2. (4%) Based on your calculation, can Pico correctly work with the received signal? Why or why not? 
 > Write your answer below.
 
 
