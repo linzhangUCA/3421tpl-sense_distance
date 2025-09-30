@@ -42,7 +42,7 @@ Blink LEDs with frequency of 5 Hz, lasting 2 seconds.
 
 ### 3. (10%) Voltage Divider Calculation
 Let's say you have two resistors, $R_1 = 1.5 k\Omega$, and  $R_2= 2.2 k\Omega$.
-Build a voltage divider circuit using these two resistors as shown in page 12 and 13 in [lecture slides](https://linzhanguca.github.io/_docs/robotics1-2025/0925/ultrasonic.pdf).
+Use these two to build a voltage divider circuit as shown in page 12 and 13 in [lecture slides](https://linzhanguca.github.io/_docs/robotics1-2025/0925/ultrasonic.pdf).
 1. (6%) Please calculate the signal voltage feed into the Pico's `GP2` pin.
 > [!IMPORTANT]
 > Please write out the math equation, define first appeared symbols and substitute numbers to finish the calculation.
