@@ -46,7 +46,7 @@ Place your robot (distasnce sensor) 0.5 meters away from the wall. Start [wall_s
 > [!IMPORTANT]
 > - Do not start the robot if the distance sensor failed to detect the wall.
 > - When one LED is on, other LEDs need to be turned off.
-> - You may need to upload [distance_sensor.py](distance_sensor.py), [motor.py](motor.py) and [diff_driver.py](diff_driver.py) to the Pico board.
+> - You may need to upload [distance_sensor.py](helper_scripts/distance_sensor.py), [motor.py](helper_scripts/motor.py) and [diff_driver.py](helper_scripts/diff_driver.py) to the Pico board.
 
 ![wall_sensing](assets/images/wall_sensing.png)
 
