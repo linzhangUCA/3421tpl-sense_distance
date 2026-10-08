@@ -1,13 +1,14 @@
-# Sense Distance 
+# Sense Distance
+## 1. Overview
 Use the ultrasonic distance sensor to sense the wall in front of your robot. 
 Code motors' behaviors based on the distance sensor's data. 
 There are taped markers on the ground to help you better observe your robot's movement. 
 
-## Requirements:
+## 2. Requirements:
 > [!IMPORTANT]
-> Redeem points by showcasing to Dr. Zhang in the classroom (LSCA105)
+> Redeem points by showcasing to Dr. Zhang in the classroom (LEDG100N)
 
-### 1. (25%) Physical Configuration
+### 2.1. (25%) Configure Physical Setup
 - (5%) Wire up the power source.
 - (5%) Wire up a Common cathode RGB LED to Pico.
 - (5%) Wire up motor driver board to Pico.
@@ -15,10 +16,10 @@ There are taped markers on the ground to help you better observe your robot's mo
 > [!NOTE]
 > Please use a voltage divider circuit to down scale `Echo` pin's signal to around **3.3 V** before feed it into a GPIO pin on Pico.
     
-### 2. (65%) Coding Exercise
+### 2.2. (65%) Coding Exercise
 Place your robot (distasnce sensor) 0.5 meters away from the wall. Start [wall_sensing.py](wall_sensing.py), and perform the following sequential movements.
 
-![wall_sense](images/wall_sensing.jpg)
+![assets/images/wall_sense](images/wall_sensing.jpg)
 
 1. (5%) Initialization (One-Time system check): blink all LEDs at the same time if the sensor found the wall (distance of `None` means no wall was found).
 Blink LEDs with frequency of 5 Hz, lasting 2 seconds.
@@ -40,7 +41,7 @@ Blink LEDs with frequency of 5 Hz, lasting 2 seconds.
 > - Feel free to use the [motor control examples](https://github.com/linzhangUCA/3421example-motor_control) to drive your motors.
 > - It is OK to use either [picozero](https://picozero.readthedocs.io/en/latest/) library or [distance sensing examples](https://github.com/linzhangUCA/3421example-ultrasonic_sensor) to get distance.
 
-### 3. (10%) Voltage Divider Calculation
+### 2.3. (10%) Voltage Divider Calculation
 Let's say you have two resistors, $R_1 = 1.5 k\Omega$, and  $R_2= 2.2 k\Omega$.
 Use these two to build a voltage divider circuit as shown in page 12 and 13 in [lecture slides](https://linzhanguca.github.io/_docs/robotics1-2025/0925/ultrasonic.pdf).
 1. (6%) Please calculate the signal voltage feed into the Pico's `GP2` pin.
