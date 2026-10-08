@@ -6,53 +6,56 @@ There are taped markers on the ground to help you better observe your robot's mo
 
 ## 2. Requirements:
 > [!IMPORTANT]
-> Redeem points by showcasing to Dr. Zhang in the classroom (LEDG100N)
+> Redeem points by showcasing to Dr. Zhang in the classroom (LEDG 100N)
 
-### 2.1. (25%) Configure Physical Setup
-- (5%) Wire up the power source.
-- (5%) Wire up a Common cathode RGB LED to Pico.
+### 2.1. (20%) Configure physical device
+- (5%) Wire up the battery and the (optional) voltage converter.
 - (5%) Wire up motor driver board to Pico.
-- (10%) Wire up HC-SR04 ultrasonic distance sensor to Pico. 
-> [!NOTE]
-> Please use a voltage divider circuit to down scale `Echo` pin's signal to around **3.3 V** before feed it into a GPIO pin on Pico.
-    
-### 2.2. (65%) Coding Exercise
-Place your robot (distasnce sensor) 0.5 meters away from the wall. Start [wall_sensing.py](wall_sensing.py), and perform the following sequential movements.
+- (3%) Wire up a **common cathode** RGB LED to Pico.
+- (7%) Wire up ultrasonic distance sensor to Pico. 
+> [!IMPORTANT]
+> - Please use a voltage dividing circuit (shown below) to down scale `Echo` pin's output voltage to a safe range for the Pico board.
+> - Please get the mobile base ready. Feel free to print parts from [TBot designs](https://github.com/linzhangUCA/r1b_mechanical/tree/main).
+
+![sensor_wiring](assets/images/sensor_wiring.png)
+
+### 2.2. (25%) Voltage divider analysis
+Let's assume the resistors in the above diagram are swapped, so $R_1 = 1.2 k\Omega$, and  $R_2= 2 k\Omega$.
+And both resistor are with 5% tolerance. 
+1. (5%) Please write down the math equation for calculating the signal voltage feed into the Pico's GPIO pin.
+2. (20%) Based on your calculation, can Pico correctly work with the received `Echo` signal? Why or why not? 
+
+> [!IMPORTANT]
+> Please define the new symbols in your equation(s).
+
+### 2.3. (53%) Sense distance and drive
+Place your robot (distasnce sensor) 0.5 meters away from the wall. Start [wall_sensing.py](wall_sensing.py), and perform the following movements in sequence.
+1. (5%) Initialization (One-Time system check): blink all LEDs at the same time if the sensor found the wall (distance of `None` means no wall was found).
+    Blink LEDs with frequency of 5 Hz, lasting 2 seconds.
+2. (10%) Drive **forward** with `GREEN` on.
+3. (2%) **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
+4. (10%) Drive **backward** with `BLUE` on.
+5. (2%) **Stop 2 second** with `RED` on, when distance to the wall is 1 +/- 0.1 meters.
+6. (10%) Drive **forward** with `GREEN` on.
+7. (2%) **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
+8. (10%) Drive **backward** with `BLUE` on.
+9. (2%) **Stop** with `RED` on, when distance to the wall is 0.5 +/- 0.1 meters.    
+
+> [!IMPORTANT]
+> - Do not start the robot if the distance sensor failed to detect the wall.
+> - When one LED is on, other LEDs need to be turned off.
+> - You may need to upload [distance_sensor.py](distance_sensor.py), [motor.py](motor.py) and [diff_driver.py](diff_driver.py) to the Pico board.
 
 ![assets/images/wall_sense](images/wall_sensing.jpg)
 
-1. (5%) Initialization (One-Time system check): blink all LEDs at the same time if the sensor found the wall (distance of `None` means no wall was found).
-Blink LEDs with frequency of 5 Hz, lasting 2 seconds.
-2. (10%) Drive **forward** with `GREEN` on.
-3. (5%) **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
-4. (10%) Drive **backward** with `BLUE` on.
-5. (5%) **Stop 1 second** with `RED` on, when distance to the wall is 1 +/- 0.1 meters.
-6. (10%) Drive **forward** with `GREEN` on.
-7. (5%) **Stop 1 second** with `RED` on, when distance to the wall is 0.25 +/- 0.1 meters.
-8. (10%) Drive **backward** with `BLUE` on.
-9. (5%) **Stop** with `RED` on, when distance to the wall is 0.5 +/- 0.1 meters.
-
-> [!NOTE]
-> When one LED is on, other LEDs need to be turned off.
 
 > [!TIP]
 > - Pick a good speed for motors.
 > - Polish your caster wheel or do some extra coding to make your robot move in straight lines.
-> - Feel free to use the [motor control examples](https://github.com/linzhangUCA/3421example-motor_control) to drive your motors.
-> - It is OK to use either [picozero](https://picozero.readthedocs.io/en/latest/) library or [distance sensing examples](https://github.com/linzhangUCA/3421example-ultrasonic_sensor) to get distance.
-
-### 2.3. (10%) Voltage Divider Calculation
-Let's say you have two resistors, $R_1 = 1.5 k\Omega$, and  $R_2= 2.2 k\Omega$.
-Use these two to build a voltage divider circuit as shown in page 12 and 13 in [lecture slides](https://linzhanguca.github.io/_docs/robotics1-2025/0925/ultrasonic.pdf).
-1. (6%) Please calculate the signal voltage feed into the Pico's `GP2` pin.
-> [!IMPORTANT]
-> Please write out the math equation, define first appeared symbols and substitute numbers to finish the calculation.
+> - It is OK to use the [picozero](https://picozero.readthedocs.io/en/latest/) library for the distance sensor.
 
 
-2. (4%) Based on your calculation, can Pico correctly work with the received signal? Why or why not? 
-> Write your answer below.
 
-
-### AI Usage Policy
-Please acknowledge AI's contribution following policies in the [syllabus](https://linzhanguca.github.io/_docs/robotics1-2025/syllabus.pdf).
+### 2.4 (2%) AI Usage Policy
+If AI helped with this assignment, please list out all the contributions.
 
