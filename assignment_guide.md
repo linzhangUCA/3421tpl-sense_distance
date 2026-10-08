@@ -44,7 +44,7 @@ Place your robot (distasnce sensor) 0.5 meters away from the wall. Start [wall_s
 > - When one LED is on, other LEDs need to be turned off.
 > - You may need to upload [distance_sensor.py](distance_sensor.py), [motor.py](motor.py) and [diff_driver.py](diff_driver.py) to the Pico board.
 
-![assets/images/wall_sense](images/wall_sensing.jpg)
+![wall_sensing](assets/images/wall_sensing.png)
 
 
 > [!TIP]
