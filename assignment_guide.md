@@ -1,12 +1,10 @@
 # Sense Distance
 ## 1. Overview
-Use the ultrasonic distance sensor to sense the wall in front of your robot. 
-Code motors' behaviors based on the distance sensor's data. 
-There are taped markers on the ground to help you better observe your robot's movement. 
+Maneuver a differential driving mobile base using a dual-channel H-Bridge motor driver board according to the wall distance perceived from a ultrasonic sensor. 
 
 ## 2. Requirements:
 > [!IMPORTANT]
-> Redeem points by showcasing to Dr. Zhang in the classroom (LEDG 100N)
+> Redeem points by **showcasing to Dr. Zhang** in the classroom (LEDG 100N)
 
 ### 2.1. (20%) Configure physical device
 - (5%) Wire up the battery and the (optional) voltage converter.
@@ -15,7 +13,7 @@ There are taped markers on the ground to help you better observe your robot's mo
 - (7%) Wire up ultrasonic distance sensor to Pico. 
 > [!IMPORTANT]
 > - Please use a voltage dividing circuit (shown below) to down scale `Echo` pin's output voltage to a safe range for the Pico board.
-> - Please get the mobile base ready. Feel free to print parts from [TBot designs](https://github.com/linzhangUCA/r1b_mechanical/tree/main).
+> - Please get the mobile base ready. Feel free to print parts from [TBot's mechanical designs](https://github.com/linzhangUCA/r1b_mechanical/tree/main).
 
 ![sensor_wiring](assets/images/sensor_wiring.png)
 
