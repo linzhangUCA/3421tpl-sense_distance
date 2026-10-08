@@ -2,6 +2,6 @@
 Rush the robot to a wall, stop at the required distance
 """
 from machine import Pin
-from picozero import DistanceSensor
-from dual_motor_driver import DualMotorDriver
+from distance_sensor import DistanceSensor
+from diff_driver import DiffDriver
 from time import sleep
