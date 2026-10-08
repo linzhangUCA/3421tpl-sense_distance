@@ -15,7 +15,11 @@ Maneuver a differential driving mobile base using a dual-channel H-Bridge motor 
 > - Please use a voltage dividing circuit (shown below) to down scale `Echo` pin's output voltage to a safe range for the Pico board.
 > - Please get the mobile base ready. Feel free to print parts from [TBot's mechanical designs](https://github.com/linzhangUCA/r1b_mechanical/tree/main).
 
-![sensor_wiring](assets/images/sensor_wiring.png)
+#### Reference distance sensor wiring 
+![ultrasonic_wiring](assets/images/ultrasonic_wiring.png)
+
+#### Reference motor driver wiring 
+![motor_wiring](assets/images/motor_wiring.png)
 
 ### 2.2. (25%) Voltage divider analysis
 Let's assume the resistors in the above diagram are swapped, so $R_1 = 1.2 k\Omega$, and  $R_2= 2 k\Omega$.
@@ -24,7 +28,7 @@ And both resistor are with 5% tolerance.
 2. (20%) Based on your calculation, can Pico correctly work with the received `Echo` signal? Why or why not? 
 
 > [!IMPORTANT]
-> Please define the new symbols in your equation(s).
+> Please define the new symbol(s) in your equation(s).
 
 ### 2.3. (53%) Sense distance and drive
 Place your robot (distasnce sensor) 0.5 meters away from the wall. Start [wall_sensing.py](wall_sensing.py), and perform the following movements in sequence.
