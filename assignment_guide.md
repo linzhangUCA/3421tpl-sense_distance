@@ -22,7 +22,7 @@ Maneuver a differential driving mobile base using a dual-channel H-Bridge motor 
 ![motor_wiring](assets/images/motor_wiring.png)
 
 ### 2.2. (25%) Voltage divider analysis
-Let's assume the resistors in the above diagram are swapped, so $R_1 = 1.2 k\Omega$, and  $R_2= 2 k\Omega$.
+Let's assume the resistors in the above diagram are swapped, so $R_1 = 2 k\Omega$, and  $R_2= 1.2 k\Omega$.
 And both resistor are with 5% tolerance. 
 1. (5%) Please write down the math equation for calculating the signal voltage feed into the Pico's GPIO pin.
 2. (20%) Based on your calculation, can Pico correctly work with the received `Echo` signal? Why or why not? 
